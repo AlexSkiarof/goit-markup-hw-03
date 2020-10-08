@@ -1,0 +1,439 @@
+:root {
+  --accent-color: #2196f3;
+}
+/* обнуляем заданные браузером отступы*/
+*,
+*:: before, 
+*:: after {
+  margin: 0;
+  padding: 0;
+}
+.img {
+  display: block;
+}
+.body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+/*====его дети и предки будут наследовать этот шрифт,
+а стайл это стн размер ====*/
+/*=================HEADER============*/
+.header-adress {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1, 142;
+  letter-spacing: 0.02em;
+}
+
+.list {
+  list-style: none;
+}
+
+/*сброс подчеркивания ссылок*/
+
+.link {
+  text-decoration: none;
+}
+/*чтобі все картинки сделали блочными без зазора в 4px*/
+
+.titel-style {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+
+  color: #000000;
+}
+.titel-style-color {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+
+  color: #2196f3;
+}
+
+/*сброс для адресса,т.к. в браузере он по умолчанию стоит италк-с наклоном*/
+.adress {
+  font-style: normal;
+}
+/*настройка верхнего блока навигации*/
+/*стиль телефона вверхней панели*/
+.navigation-list-link,
+.header-tel-link,
+.header-mail-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1, 142;
+  letter-spacing: 0.02em;
+
+  color: #000000;
+}
+
+/*===================================BODY=======================*/
+
+/* настройки кнопки*/
+.modal-button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1, 875;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  /*из-за разности отображения шрифтов, падинги лучше делать чуть меньше если как на макете в одну строчку не влазит*/
+  width: 200px;
+  min-height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 28px;
+
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: auto;
+}
+/*ставим ховер чтобы выделялся при наведении, и форкус если эллемент интерактивный,
+ а ниже цвет который должен преобретать*/
+.navigation-list-link:hover,
+.navigation-list-link:focus,
+.navigation-list-link:active,
+.header-tel-link:hover,
+.header-tel-link:focus,
+.header-mail-link:hover,
+.header-mail-link:focus {
+  color: #2196f3;
+}
+.active {
+  color: var(--accent-color);
+}
+
+/*позаголовки блока №2*/
+/*text-transform: uppercase; --это когда все буквы надо сделать заглавными*/
+.subtitel {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1, 142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #212121;
+}
+/*описание блоков №2*/
+.description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.hero-titel {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1, 364;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  padding-left: 274px;
+  padding-right: 274px;
+  padding-top: 200px; /*если прийдется вынять хэдер из контента поставить 279px*/
+  padding-bottom: 30px;
+
+  /*color: #ffffff;*/
+}
+.subtitle-description {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1, 166;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+.container {
+  width: 1200;
+  padding: 0 15px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+/*dicplay: flex - надо здать каждому эллементу как блоку так и его подразделам*/
+.header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 15px;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+}
+
+.header-adress {
+  display: flex;
+}
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.logo {
+  margin-right: 93px;
+}
+/*последним лишкам мы марджины обнуляем*/
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header .adress {
+  margin-left: auto;
+  margin-right: 50px;
+}
+.description-block .container {
+  display: flex;
+}
+
+.subtitel-description-list {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  height: 101px;
+  margin-bottom: 94px;
+  margin-top: 94px;
+}
+/*=====================ABOUT US=======================*/
+.gallery .container {
+  display: flex;
+}
+
+.gallery-list {
+  display: flex;
+}
+
+.gallery-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.subtitel-description {
+  margin-bottom: 50px;
+}
+/*====================ABOUT COMMAND==================*/
+.command .container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+}
+
+.about-person-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-person-content {
+  padding-top: 30px;
+  padding-bottom: 59px;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.about-person-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1, 187;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+
+  color: #212121;
+}
+.about-profession {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1, 187;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.cotact-list-link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1, 714;
+  letter-spacing: 0.03em;
+
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*==================PORTFOLIO================================*/
+.modal-button-list {
+  display: flex;
+}
+
+.modal-button-item {
+  margin-right: 8px;
+}
+
+.gallery-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-portfolio-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.hero-portfolio .container {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  height: 101px;
+  margin-bottom: 94px;
+  margin-top: 94px;
+}
+
+.gallery-portfolio {
+  display: flex;
+}
+.gallery-portfolio-list {
+  display: flex;
+}
+
+.content-portfolio-name {
+  margin-bottom: 4px;
+  margin-top: 20px;
+}
+
+.gallery-discription {
+  margin-bottom: 20px;
+}
+
+.modal-button-item {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1, 165;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: var (--accent-color);
+  color: #212121;
+}
+
+modal-button-list:hover,
+modal-button-list:focus {
+  background-color: #2196f3;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+.content-portfolio-name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  /* identical to box height, or 200% */
+
+  letter-spacing: 0.06em;
+
+  color: #212121;
+}
+.gallery-discription {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1, 875;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.portfolio-list-content {
+  padding-top: 20px;
+  padding-bottom: 54px;
+  padding-left: 24px;
+  padding-right: 24px;
+  /*обводки карточек*/
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.content-portfolio-name {
+  margin-bottom: 4px;
+}
+
+.subtitel:not(:last-child) {
+  margin-right: 30px;
+}
+.subtitel {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 94px;
+}
+.description:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.gallery {
+  display: flex;
+}
+.gallery-discription {
+  display: flex;
+}
+/* нужно высчитывать из ширины и высоты толщину  -borger, и -padding
+ например если высота и ширина по 250 а рамка 10 и паддинг 10, то изначально надо прописать все по 210
+ . Если ввести box-siting: border-box - то рамка и паддинг не будут влиять на размеры рамки, а будут брать внутреннюю часть контента для себя*/
+/*расстояние межбу секциями это padding их ставиться 2 вверхний и нижний padding-top и padding-botton 
+и в тоже время падинги это внутренние отступы когда нужно толкнуть контент внутри эллемента*/
+/*расстояние между секциями где границу не видно т.к. нет фона считает из расцета расстояния между крайними эллементами и делится на 2
+(например на стр1 между "описаниями" и  "чем мы занимаемся" расстояние 94, значит падигни по 47.
+ А вот между блоками самого описания(внимание к деталям, пунктуальность и т.п.) будет margin
+  и "чем мы занимаемся" -между фото и в верхнем блоке "студика, портфолио, контакты" - тоже margin.
+   margin-botton от заголовка "чем мы занимаемся" и аналогичных, до фоток в низ */
+/*margin нужен чтобы соседние эллементы расталкивать между собой/ 
+если не прописать margin то не будут видны разрывы между соседними эллементами когда задастся задний фон. 
+Можно дать только одному эллементу марджин, суммировать не обязательно*/
+/*у крайних эллементов мы margin убирает "контакты портфолиб, логотип и тп"*/
+/* list-item:not(:last-child) {} -- применить ко всем, кроме к последней, например можно прим.к марждинам.
+в примере применял к тегам одного уровня списка <li>*/
+/*ul.gallery>li.gallery-item*9 --через точку уже в быстром создавании прописываем классы*/
+/*margin-left: auto;
+  margin-left: auto; он крепил в div внутри которого был список с фотками*/
+/*front-size: 0; -вещается на родителя, чтобы сбросить отступы которые стоят по умолчанию между фото
+а к li он применяет обнуления крайних  margin, что крайние фото не переносились 
+.gallery-item:not(:nth-child(3n){
+  margin-right: 30px
+}   ЭТО ВСЕ БЫЛО ПРИ ИССП БЛОЧНО-СТРОЧНОЙ СИСТЕМЫ*/
+
+/*FLAXBOX*/
+/*displey: flex; -- горизонтально
+displey: column -- вертикально
+добавить reverse -в обр порядке
+justify-content: center --выравнивание по главной оси
+align-items: center;-- относительно листа по поперечной оси
+flex-wrap:nowrap; --разрешение или запрещение переноса
+order:1 -порядок расположения эллемента*/ ;
