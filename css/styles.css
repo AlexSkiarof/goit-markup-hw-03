@@ -26,6 +26,8 @@
   letter-spacing: 0.02em;
 }
 
+.ul,
+.li,
 .list {
   list-style: none;
 }
@@ -201,7 +203,7 @@
   padding-bottom: 25px;
 }
 
-.logo {
+.navigation .logo {
   margin-right: 93px;
 }
 /*последним лишкам мы марджины обнуляем*/
@@ -303,24 +305,32 @@
   display: flex;
   flex-wrap: wrap;
 }
+.gallery-portfolio-list {
+  display: flex;
+}
+
+.modal-button-list {
+  font-size: 0;
+}
+
+.modal-button-item {
+  display: inline-block;
+}
 
 .gallery-portfolio-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
-.hero-portfolio .container {
+
+.gallery-portfolio .container {
   display: flex;
   align-items: center;
   width: 1200px;
-  height: 101px;
+  /*height: 101px;*/
   margin-bottom: 94px;
   margin-top: 94px;
-}
-
-.gallery-portfolio {
-  display: flex;
-}
-.gallery-portfolio-list {
-  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 
 .content-portfolio-name {
@@ -352,6 +362,21 @@ modal-button-list:focus {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
+
+.footer .container {
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 1200px;
+}
+
+.logo-footer {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.footer-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .content-portfolio-name {
   font-weight: bold;
   font-size: 18px;
