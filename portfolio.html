@@ -45,10 +45,9 @@
       </address>
       </div>
     </header>
-    <main class="hero-portfolio"> 
-      <div class="container///">
-      <!-- блок 1 с кнопками-->
-      <seсtion class="portfolio-button">
+    <main class="hero-portfolio">
+      <!--Блок с портфолио-->
+      <section class="gallery-portfolio">
         <div class="container">
         <ul class="modal-button-list list">
           <li><button class="modal-button-item " type="button">Все </button></li>
@@ -57,10 +56,6 @@
           <li><button class="modal-button-item" type="button">Дизайн </button></li>
           <li><button class="modal-button-item" type="button">Маркетинг </button></li>
         </ul>
-        </div>
-      </seсtion>
-      <!--Блок с портфолио-->
-      <section class="gallery-portfolio">
         <!--создается все сразу комбинашкой ul>li*4>+img+h3+p-->
         <ul class="gallery-portfolio list">
           <li class="gallery-portfolio-item">
@@ -162,28 +157,30 @@
             </div>
           </li>
         </ul>
-        
+        </div>
       </section>
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <!--подвал-->
-        <a class="logo link" href="./index.html">
+      <div class="container"> 
+        <a class="logo link logo-footer" href="./index.html">
           <h2 class="titel-style"><span class="titel-style-color">Web</span>studio</h2>
           <address>
           <ul class="header-adress-footer list">
-            <li>
+            <li class="footer-list-item">
               <a class="cotact-list-link link" href="https://goo.gl/maps/dJMVyHrXvRRf3svE7" target="_blank">г. Киев, пр-т
                 Леси Украинки, 26 ></a>
             </li>
-            <li>
+            <li class="footer-list-item">
               <a class="cotact-list-link link list" href="mailto:info@example.com">info@example.com</a>
             </li>
-            <li>
+            <li class="footer-list-item">
               <a class="cotact-list-link link list" href="tel:+380991111111"> +38099 111 11 11 </a>
             </li>
           </ul>
           </address>
+          </div>
     </footer>
   </body>
 </html>
