@@ -179,11 +179,11 @@
 }
 /*dicplay: flex - надо здать каждому эллементу как блоку так и его подразделам*/
 .header .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  width: 1200px;
   padding: 0 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .navigation {
   display: flex;
@@ -192,6 +192,7 @@
 
 .navigation-list {
   display: flex;
+  align-items: center;
 }
 
 .header-adress {
@@ -213,8 +214,9 @@
 
 .header .adress {
   margin-left: auto;
-  margin-right: 50px;
+  margin-right: 10px;
 }
+
 .description-block .container {
   display: flex;
 }
@@ -227,6 +229,16 @@
   margin-bottom: 94px;
   margin-top: 94px;
 }
+.subtitel-description-content:not(last-child) {
+  margin-right: 30px;
+}
+
+.subtitel {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 94px;
+}
+
 /*=====================ABOUT US=======================*/
 .gallery .container {
   display: flex;
@@ -260,6 +272,9 @@
   padding-bottom: 59px;
   padding-right: 60px;
   padding-left: 60px;
+
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .about-person-name {
@@ -343,33 +358,37 @@
 }
 
 .modal-button-item {
-  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1, 165;
   text-align: center;
   letter-spacing: 0.03em;
-  background-color: var (--accent-color);
   color: #212121;
 }
 
-modal-button-list:hover,
-modal-button-list:focus {
+.modal-button-item:hover,
+.modal-button-item:focus,
+.modal-button-item:active {
   background-color: #2196f3;
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  color: #ffffff;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 161px;
 }
 
 .footer .container {
-  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
-  width: 1200px;
 }
-
-.logo-footer {
+.footer .logo {
   margin-top: 60px;
   margin-bottom: 20px;
 }
@@ -411,54 +430,9 @@ modal-button-list:focus {
   margin-bottom: 4px;
 }
 
-.subtitel:not(:last-child) {
-  margin-right: 30px;
-}
-.subtitel {
-  display: flex;
-  margin-bottom: 10px;
-  margin-top: 94px;
-}
-.description:not(:last-child) {
-  margin-bottom: 30px;
-}
-
 .gallery {
   display: flex;
 }
 .gallery-discription {
   display: flex;
 }
-/* нужно высчитывать из ширины и высоты толщину  -borger, и -padding
- например если высота и ширина по 250 а рамка 10 и паддинг 10, то изначально надо прописать все по 210
- . Если ввести box-siting: border-box - то рамка и паддинг не будут влиять на размеры рамки, а будут брать внутреннюю часть контента для себя*/
-/*расстояние межбу секциями это padding их ставиться 2 вверхний и нижний padding-top и padding-botton 
-и в тоже время падинги это внутренние отступы когда нужно толкнуть контент внутри эллемента*/
-/*расстояние между секциями где границу не видно т.к. нет фона считает из расцета расстояния между крайними эллементами и делится на 2
-(например на стр1 между "описаниями" и  "чем мы занимаемся" расстояние 94, значит падигни по 47.
- А вот между блоками самого описания(внимание к деталям, пунктуальность и т.п.) будет margin
-  и "чем мы занимаемся" -между фото и в верхнем блоке "студика, портфолио, контакты" - тоже margin.
-   margin-botton от заголовка "чем мы занимаемся" и аналогичных, до фоток в низ */
-/*margin нужен чтобы соседние эллементы расталкивать между собой/ 
-если не прописать margin то не будут видны разрывы между соседними эллементами когда задастся задний фон. 
-Можно дать только одному эллементу марджин, суммировать не обязательно*/
-/*у крайних эллементов мы margin убирает "контакты портфолиб, логотип и тп"*/
-/* list-item:not(:last-child) {} -- применить ко всем, кроме к последней, например можно прим.к марждинам.
-в примере применял к тегам одного уровня списка <li>*/
-/*ul.gallery>li.gallery-item*9 --через точку уже в быстром создавании прописываем классы*/
-/*margin-left: auto;
-  margin-left: auto; он крепил в div внутри которого был список с фотками*/
-/*front-size: 0; -вещается на родителя, чтобы сбросить отступы которые стоят по умолчанию между фото
-а к li он применяет обнуления крайних  margin, что крайние фото не переносились 
-.gallery-item:not(:nth-child(3n){
-  margin-right: 30px
-}   ЭТО ВСЕ БЫЛО ПРИ ИССП БЛОЧНО-СТРОЧНОЙ СИСТЕМЫ*/
-
-/*FLAXBOX*/
-/*displey: flex; -- горизонтально
-displey: column -- вертикально
-добавить reverse -в обр порядке
-justify-content: center --выравнивание по главной оси
-align-items: center;-- относительно листа по поперечной оси
-flex-wrap:nowrap; --разрешение или запрещение переноса
-order:1 -порядок расположения эллемента*/ ;
