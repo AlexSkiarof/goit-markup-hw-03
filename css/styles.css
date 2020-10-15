@@ -316,7 +316,12 @@
 .modal-button-item {
   margin-right: 8px;
 }
-
+.hero-portfolio {
+  margin-top: 94px;
+}
+.modal-button-list {
+  margin-bottom: 50px;
+}
 .gallery-portfolio {
   display: flex;
   flex-wrap: wrap;
