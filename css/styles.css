@@ -20,9 +20,10 @@
 а стайл это стн размер ====*/
 /*=================HEADER============*/
 .header-adress {
+  font-family: "Roboto";
   font-weight: 500;
   font-size: 14px;
-  line-height: 1, 142;
+  line-height: 1.1;
   letter-spacing: 0.02em;
 }
 
@@ -40,26 +41,29 @@
 /*чтобі все картинки сделали блочными без зазора в 4px*/
 
 .titel-style {
-  font-family: Raleway;
+  font-family: "Raleway";
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
 
   color: #000000;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  margin: auto;
+  padding-left: 215px;
 }
 .titel-style-color {
-  font-family: Raleway;
+  font-family: "Raleway";
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.1;
   letter-spacing: 0.03em;
 
   color: #2196f3;
 }
-
 /*сброс для адресса,т.к. в браузере он по умолчанию стоит италк-с наклоном*/
 .adress {
   font-style: normal;
@@ -69,23 +73,30 @@
 .navigation-list-link,
 .header-tel-link,
 .header-mail-link {
+  font-family: "Roboto";
   font-weight: 500;
   font-size: 14px;
-  line-height: 1, 142;
+  line-height: 1.1;
   letter-spacing: 0.02em;
 
-  color: #000000;
+  color: #212121;
 }
 
 /*===================================BODY=======================*/
 
+.hero .container {
+  /*делаем затемнение с помощью градиента   */
+
+  width: 1600px;
+  height: 600px;
+}
 /* настройки кнопки*/
 .modal-button {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  line-height: 1, 875;
+  line-height: 1.8;
 
   display: flex;
   align-items: center;
@@ -123,9 +134,10 @@
 /*позаголовки блока №2*/
 /*text-transform: uppercase; --это когда все буквы надо сделать заглавными*/
 .subtitel {
+  font-family: "Roboto";
   font-weight: bold;
   font-size: 14px;
-  line-height: 1, 142;
+  line-height: 1.1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
@@ -133,21 +145,29 @@
 }
 /*описание блоков №2*/
 .description {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.7;
 
   letter-spacing: 0.03em;
 
   color: #757575;
 }
 
+.social-mail-svg {
+  height: 16px;
+  width: 12px;
+}
+
 .hero-titel {
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 900;
   font-size: 44px;
-  line-height: 1, 364;
+  line-height: 1.3;
+  margin: 0 auto;
 
   text-align: center;
   letter-spacing: 0.06em;
@@ -158,12 +178,13 @@
   padding-top: 200px; /*если прийдется вынять хэдер из контента поставить 279px*/
   padding-bottom: 30px;
 
-  /*color: #ffffff;*/
+  color: #000000;
 }
 .subtitle-description {
+  font-family: "Roboto";
   font-weight: bold;
   font-size: 36px;
-  line-height: 1, 166;
+  line-height: 1.1;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -193,6 +214,7 @@
 .navigation-list {
   display: flex;
   align-items: center;
+  padding-top: 40px;
 }
 
 .header-adress {
@@ -235,12 +257,13 @@
 }
 
 .subtitel {
-  display: flex;
+  /*display: flex;*/
   margin-bottom: 10px;
   margin-top: 94px;
 }
 
 /*=====================ABOUT US=======================*/
+
 .gallery .container {
   display: flex;
 }
@@ -255,13 +278,18 @@
 .subtitel-description {
   margin-bottom: 50px;
 }
+.subtitle-description {
+  margin-top: 94px;
+}
 /*====================ABOUT COMMAND==================*/
 .command .container {
   display: flex;
+  background-color: #f5f4fa;
 }
 
 .about-list {
   display: flex;
+  margin-bottom: 94px;
 }
 
 .about-person-item:not(:last-child) {
@@ -270,18 +298,20 @@
 
 .about-person-content {
   padding-top: 30px;
-  padding-bottom: 59px;
-  padding-right: 60px;
-  padding-left: 60px;
-
+  padding-bottom: 29px;
+  padding-right: 30px;
+  padding-left: 32px;
   border: 1px solid #eeeeee;
   border-top: none;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .about-person-name {
+  font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
-  line-height: 1, 187;
+  line-height: 1.1;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
@@ -289,33 +319,85 @@
   color: #212121;
 }
 .about-profession {
+  font-family: "Roboto";
   font-weight: normal;
   font-size: 16px;
-  line-height: 1, 187;
+  line-height: 1.1;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 
   color: #757575;
 }
 
 .contact-list-link {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 1, 714;
+  line-height: 1.7;
   letter-spacing: 0.03em;
 
   color: rgba(0, 0, 0, 0.6);
 }
 
-/*==================PORTFOLIO================================*/
-.modal-button-list {
+/*==================FOOTER================*/
+
+.welcam {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
   display: flex;
 }
 
-.modal-button-item {
-  margin-right: 8px;
+.social-list-footer {
+  display: flex;
+  padding: 0;
 }
+
+.footer {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  /*width: 1600px;*/
+  height: 262px;
+
+  margin-left: -110px;
+}
+
+.footer-portfolio {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 50px;
+  width: 1170px;
+  padding: 0 15px;
+}
+.footer .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.footer .logo {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.contact-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.header-adress-footer {
+  padding-left: 215px;
+  margin: 0 auto;
+}
+
+/*==================PORTFOLIO==========================================*/
+
 .hero-portfolio {
   margin-top: 94px;
 }
@@ -332,10 +414,6 @@
 
 .modal-button-list {
   font-size: 0;
-}
-
-.modal-button-item {
-  display: inline-block;
 }
 
 .gallery-portfolio-item:not(:nth-child(3n)) {
@@ -364,13 +442,29 @@
 }
 
 .modal-button-item {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1, 165;
+  line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  display: inline-block;
+
+  height: 38px;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+  border-color: #ffffff;
+}
+
+.modal-button-list {
+  display: flex;
+}
+
+.modal-button-item {
+  margin-right: 8px;
 }
 
 .modal-button-item:hover,
@@ -379,45 +473,12 @@
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+
   color: #ffffff;
 }
 
-.footer {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  margin-left: 180px;
-  width: 1170px;
-  padding: 0 15px;
-}
-
-.footer-portfolio {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  margin-left: 50px;
-  width: 1170px;
-  padding: 0 15px;
-}
-.footer .container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.footer .logo {
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
-.contact-list-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-.header-adress-footer {
-  margin-left: -40px;
-}
-.header-adress-footer {
-  margin-bottom: 40px;
-}
-
 .content-portfolio-name {
+  font-family: "Roboto";
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -428,10 +489,11 @@
   color: #212121;
 }
 .gallery-discription {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 1, 875;
+  line-height: 1.8;
   letter-spacing: 0.03em;
 
   color: #757575;
@@ -445,6 +507,11 @@
   /*обводки карточек*/
   border: 1px solid #eeeeee;
   border-top: none;
+}
+
+.gallery-portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .content-portfolio-name {
